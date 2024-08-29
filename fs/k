@@ -1,0 +1,573 @@
+gcc -Wall -O -fstrength-reduce -fomit-frame-pointer -m32 -fno-stack-protector -fno-builtin -nostdinc -I../include \
+-c -o open.o open.c
+In file included from open.c:8:
+../include/linux/sched.h:206: warning: "set_base" redefined
+  206 | #define set_base(ldt,base) _set_base( ((char *)&(ldt)) , base )
+      | 
+../include/linux/sched.h:185: note: this is the location of the previous definition
+  185 | #define set_base(addr,base) \
+      | 
+open.c: In function ‘sys_access’:
+open.c:42:12: warning: suggest explicit braces to avoid ambiguous ‘else’ [-Wdangling-else]
+   42 |         if (!(current->euid && current->uid))
+      |            ^
+open.c: In function ‘sys_chmod’:
+open.c:92:12: warning: suggest explicit braces to avoid ambiguous ‘else’ [-Wdangling-else]
+   92 |         if (current->uid && current->euid)
+      |            ^
+open.c: In function ‘sys_open’:
+open.c:146:12: warning: suggest explicit braces to avoid ambiguous ‘else’ [-Wdangling-else]
+  146 |         if (S_ISCHR(inode->i_mode))
+      |            ^
+gcc -Wall -O -fstrength-reduce -fomit-frame-pointer -m32 -fno-stack-protector -fno-builtin -nostdinc -I../include \
+-c -o read_write.o read_write.c
+In file included from read_write.c:6:
+../include/linux/sched.h:206: warning: "set_base" redefined
+  206 | #define set_base(ldt,base) _set_base( ((char *)&(ldt)) , base )
+      | 
+../include/linux/sched.h:185: note: this is the location of the previous definition
+  185 | #define set_base(addr,base) \
+      | 
+gcc -Wall -O -fstrength-reduce -fomit-frame-pointer -m32 -fno-stack-protector -fno-builtin -nostdinc -I../include \
+-c -o inode.o inode.c
+In file included from inode.c:3:
+../include/linux/sched.h:206: warning: "set_base" redefined
+  206 | #define set_base(ldt,base) _set_base( ((char *)&(ldt)) , base )
+      | 
+../include/linux/sched.h:185: note: this is the location of the previous definition
+  185 | #define set_base(addr,base) \
+      | 
+inode.c: In function ‘_bmap’:
+inode.c:60:29: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+   60 |                         if (inode->i_zone[block]=new_block(inode->i_dev)) {
+      |                             ^~~~~
+inode.c:69:29: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+   69 |                         if (inode->i_zone[7]=new_block(inode->i_dev)) {
+      |                             ^~~~~
+inode.c:79:29: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+   79 |                         if (i=new_block(inode->i_dev)) {
+      |                             ^
+inode.c:88:21: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+   88 |                 if (inode->i_zone[8]=new_block(inode->i_dev)) {
+      |                     ^~~~~
+inode.c:98:21: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+   98 |                 if (i=new_block(inode->i_dev)) {
+      |                     ^
+inode.c:109:21: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+  109 |                 if (i=new_block(inode->i_dev)) {
+      |                     ^
+gcc -Wall -O -fstrength-reduce -fomit-frame-pointer -m32 -fno-stack-protector -fno-builtin -nostdinc -I../include \
+-c -o file_table.o file_table.c
+gcc -Wall -O -fstrength-reduce -fomit-frame-pointer -m32 -fno-stack-protector -fno-builtin -nostdinc -I../include \
+-c -o buffer.o buffer.c
+In file included from buffer.c:10:
+../include/linux/sched.h:206: warning: "set_base" redefined
+  206 | #define set_base(ldt,base) _set_base( ((char *)&(ldt)) , base )
+      | 
+../include/linux/sched.h:185: note: this is the location of the previous definition
+  185 | #define set_base(addr,base) \
+      | 
+buffer.c: In function ‘getblk’:
+buffer.c:149:13: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+  149 |         if (tmp=get_hash_table(dev,block))
+      |             ^~~
+gcc -Wall -O -fstrength-reduce -fomit-frame-pointer -m32 -fno-stack-protector -fno-builtin -nostdinc -I../include \
+-c -o super.o super.c
+In file included from super.c:5:
+../include/linux/sched.h:206: warning: "set_base" redefined
+  206 | #define set_base(ldt,base) _set_base( ((char *)&(ldt)) , base )
+      | 
+../include/linux/sched.h:185: note: this is the location of the previous definition
+  185 | #define set_base(addr,base) \
+      | 
+super.c: In function ‘do_mount’:
+super.c:42:21: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+   42 |                 if (p->s_imap[i]=bread(dev,block))
+      |                     ^
+super.c:47:21: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+   47 |                 if (p->s_zmap[i]=bread(dev,block))
+      |                     ^
+gcc -Wall -O -fstrength-reduce -fomit-frame-pointer -m32 -fno-stack-protector -fno-builtin -nostdinc -I../include \
+-c -o block_dev.o block_dev.c
+gcc -Wall -O -fstrength-reduce -fomit-frame-pointer -m32 -fno-stack-protector -fno-builtin -nostdinc -I../include \
+-c -o char_dev.o char_dev.c
+In file included from char_dev.c:3:
+../include/linux/sched.h:206: warning: "set_base" redefined
+  206 | #define set_base(ldt,base) _set_base( ((char *)&(ldt)) , base )
+      | 
+../include/linux/sched.h:185: note: this is the location of the previous definition
+  185 | #define set_base(addr,base) \
+      | 
+char_dev.c:12:11: warning: type defaults to ‘int’ in declaration of ‘crw_ptr’ [-Wimplicit-int]
+   12 | typedef (*crw_ptr)(int rw,unsigned minor,char * buf,int count);
+      |           ^~~~~~~
+gcc -Wall -O -fstrength-reduce -fomit-frame-pointer -m32 -fno-stack-protector -fno-builtin -nostdinc -I../include \
+-c -o file_dev.o file_dev.c
+In file included from file_dev.c:4:
+../include/linux/sched.h:206: warning: "set_base" redefined
+  206 | #define set_base(ldt,base) _set_base( ((char *)&(ldt)) , base )
+      | 
+../include/linux/sched.h:185: note: this is the location of the previous definition
+  185 | #define set_base(addr,base) \
+      | 
+file_dev.c: In function ‘file_read’:
+file_dev.c:19:21: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+   19 |                 if (nr = bmap(inode,(filp->f_pos)/BLOCK_SIZE)) {
+      |                     ^~
+gcc -Wall -O -fstrength-reduce -fomit-frame-pointer -m32 -fno-stack-protector -fno-builtin -nostdinc -I../include \
+-c -o stat.o stat.c
+In file included from stat.c:5:
+../include/linux/sched.h:206: warning: "set_base" redefined
+  206 | #define set_base(ldt,base) _set_base( ((char *)&(ldt)) , base )
+      | 
+../include/linux/sched.h:185: note: this is the location of the previous definition
+  185 | #define set_base(addr,base) \
+      | 
+gcc -Wall -O -fstrength-reduce -fomit-frame-pointer -m32 -fno-stack-protector -fno-builtin -nostdinc -I../include \
+-c -o exec.o exec.c
+In file included from exec.c:6:
+../include/linux/sched.h:206: warning: "set_base" redefined
+  206 | #define set_base(ldt,base) _set_base( ((char *)&(ldt)) , base )
+      | 
+../include/linux/sched.h:185: note: this is the location of the previous definition
+  185 | #define set_base(addr,base) \
+      | 
+exec.c: In function ‘read_ind’:
+exec.c:68:21: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+   68 |                 if (block=*(table++))
+      |                     ^~~~~
+exec.c:68:20: warning: suggest explicit braces to avoid ambiguous ‘else’ [-Wdangling-else]
+   68 |                 if (block=*(table++))
+      |                    ^
+exec.c: In function ‘count’:
+exec.c:149:13: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+  149 |         if (tmp = argv)
+      |             ^~~
+exec.c: In function ‘change_ldt’:
+../include/linux/sched.h:206:28: warning: implicit declaration of function ‘_set_base’; did you mean ‘set_base’? [-Wimplicit-function-declaration]
+  206 | #define set_base(ldt,base) _set_base( ((char *)&(ldt)) , base )
+      |                            ^~~~~~~~~
+exec.c:203:9: note: in expansion of macro ‘set_base’
+  203 |         set_base(current->ldt[1],code_base);
+      |         ^~~~~~~~
+exec.c: In function ‘read_area’:
+exec.c:108:1: warning: control reaches end of non-void function [-Wreturn-type]
+  108 | }
+      | ^
+gcc -Wall -O -fstrength-reduce -fomit-frame-pointer -m32 -fno-stack-protector -fno-builtin -nostdinc -I../include \
+-c -o pipe.o pipe.c
+In file included from pipe.c:3:
+../include/linux/sched.h:206: warning: "set_base" redefined
+  206 | #define set_base(ldt,base) _set_base( ((char *)&(ldt)) , base )
+      | 
+../include/linux/sched.h:185: note: this is the location of the previous definition
+  185 | #define set_base(addr,base) \
+      | 
+gcc -Wall -O -fstrength-reduce -fomit-frame-pointer -m32 -fno-stack-protector -fno-builtin -nostdinc -I../include \
+-c -o namei.o namei.c
+In file included from namei.c:1:
+../include/linux/sched.h:206: warning: "set_base" redefined
+  206 | #define set_base(ldt,base) _set_base( ((char *)&(ldt)) , base )
+      | 
+../include/linux/sched.h:185: note: this is the location of the previous definition
+  185 | #define set_base(addr,base) \
+      | 
+namei.c: In function ‘dir_namei’:
+namei.c:257:16: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+  257 |         while (c=get_fs_byte(pathname++))
+      |                ^
+gcc -Wall -O -fstrength-reduce -fomit-frame-pointer -m32 -fno-stack-protector -fno-builtin -nostdinc -I../include \
+-c -o bitmap.o bitmap.c
+In file included from bitmap.c:4:
+../include/linux/sched.h:206: warning: "set_base" redefined
+  206 | #define set_base(ldt,base) _set_base( ((char *)&(ldt)) , base )
+      | 
+../include/linux/sched.h:185: note: this is the location of the previous definition
+  185 | #define set_base(addr,base) \
+      | 
+bitmap.c: In function ‘new_block’:
+bitmap.c:77:21: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+   77 |                 if (bh=sb->s_zmap[i])
+      |                     ^~
+bitmap.c: In function ‘new_inode’:
+bitmap.c:141:21: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+  141 |                 if (bh=sb->s_imap[i])
+      |                     ^~
+gcc -Wall -O -fstrength-reduce -fomit-frame-pointer -m32 -fno-stack-protector -fno-builtin -nostdinc -I../include \
+-c -o fcntl.o fcntl.c
+In file included from fcntl.c:3:
+../include/linux/sched.h:206: warning: "set_base" redefined
+  206 | #define set_base(ldt,base) _set_base( ((char *)&(ldt)) , base )
+      | 
+../include/linux/sched.h:185: note: this is the location of the previous definition
+  185 | #define set_base(addr,base) \
+      | 
+gcc -Wall -O -fstrength-reduce -fomit-frame-pointer -m32 -fno-stack-protector -fno-builtin -nostdinc -I../include \
+-c -o ioctl.o ioctl.c
+In file included from ioctl.c:5:
+../include/linux/sched.h:206: warning: "set_base" redefined
+  206 | #define set_base(ldt,base) _set_base( ((char *)&(ldt)) , base )
+      | 
+../include/linux/sched.h:185: note: this is the location of the previous definition
+  185 | #define set_base(addr,base) \
+      | 
+gcc -Wall -O -fstrength-reduce -fomit-frame-pointer -m32 -fno-stack-protector -fno-builtin -nostdinc -I../include \
+-c -o tty_ioctl.o tty_ioctl.c
+In file included from tty_ioctl.c:4:
+../include/linux/sched.h:206: warning: "set_base" redefined
+  206 | #define set_base(ldt,base) _set_base( ((char *)&(ldt)) , base )
+      | 
+../include/linux/sched.h:185: note: this is the location of the previous definition
+  185 | #define set_base(addr,base) \
+      | 
+gcc -Wall -O -fstrength-reduce -fomit-frame-pointer -m32 -fno-stack-protector -fno-builtin -nostdinc -I../include \
+-c -o truncate.o truncate.c
+In file included from truncate.c:1:
+../include/linux/sched.h:206: warning: "set_base" redefined
+  206 | #define set_base(ldt,base) _set_base( ((char *)&(ldt)) , base )
+      | 
+../include/linux/sched.h:185: note: this is the location of the previous definition
+  185 | #define set_base(addr,base) \
+      | 
+truncate.c: In function ‘free_ind’:
+truncate.c:13:13: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+   13 |         if (bh=bread(dev,block)) {
+      |             ^~
+truncate.c: In function ‘free_dind’:
+truncate.c:31:13: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+   31 |         if (bh=bread(dev,block)) {
+      |             ^~
+ld -m elf_i386 -r -o fs.o open.o read_write.o inode.o file_table.o buffer.o super.o block_dev.o char_dev.o file_dev.o stat.o exec.o pipe.o namei.o bitmap.o fcntl.o ioctl.o tty_ioctl.o truncate.o
+ld: read_write.o: in function `get_super':
+read_write.c:(.text+0x0): multiple definition of `get_super'; open.o:open.c:(.text+0x314): first defined here
+ld: read_write.o: in function `get_fs_byte':
+read_write.c:(.text+0x32): multiple definition of `get_fs_byte'; open.o:open.c:(.text+0x346): first defined here
+ld: read_write.o: in function `get_fs_word':
+read_write.c:(.text+0x3a): multiple definition of `get_fs_word'; open.o:open.c:(.text+0x34e): first defined here
+ld: read_write.o: in function `get_fs_long':
+read_write.c:(.text+0x43): multiple definition of `get_fs_long'; open.o:open.c:(.text+0x357): first defined here
+ld: read_write.o: in function `put_fs_byte':
+read_write.c:(.text+0x4b): multiple definition of `put_fs_byte'; open.o:open.c:(.text+0x35f): first defined here
+ld: read_write.o: in function `put_fs_word':
+read_write.c:(.text+0x58): multiple definition of `put_fs_word'; open.o:open.c:(.text+0x36c): first defined here
+ld: read_write.o: in function `put_fs_long':
+read_write.c:(.text+0x66): multiple definition of `put_fs_long'; open.o:open.c:(.text+0x37a): first defined here
+ld: inode.o: in function `strcpy':
+inode.c:(.text+0x4a1): multiple definition of `strcpy'; open.o:open.c:(.text+0x0): first defined here
+ld: inode.o: in function `strncpy':
+inode.c:(.text+0x4b7): multiple definition of `strncpy'; open.o:open.c:(.text+0x16): first defined here
+ld: inode.o: in function `strcat':
+inode.c:(.text+0x4d6): multiple definition of `strcat'; open.o:open.c:(.text+0x35): first defined here
+ld: inode.o: in function `strncat':
+inode.c:(.text+0x4f9): multiple definition of `strncat'; open.o:open.c:(.text+0x58): first defined here
+ld: inode.o: in function `strcmp':
+inode.c:(.text+0x526): multiple definition of `strcmp'; open.o:open.c:(.text+0x85): first defined here
+ld: inode.o: in function `strncmp':
+inode.c:(.text+0x549): multiple definition of `strncmp'; open.o:open.c:(.text+0xa8): first defined here
+ld: inode.o: in function `strchr':
+inode.c:(.text+0x573): multiple definition of `strchr'; open.o:open.c:(.text+0xd2): first defined here
+ld: inode.o: in function `strrchr':
+inode.c:(.text+0x592): multiple definition of `strrchr'; open.o:open.c:(.text+0xf1): first defined here
+ld: inode.o: in function `strspn':
+inode.c:(.text+0x5b3): multiple definition of `strspn'; open.o:open.c:(.text+0x112): first defined here
+ld: inode.o: in function `strcspn':
+inode.c:(.text+0x5e6): multiple definition of `strcspn'; open.o:open.c:(.text+0x145): first defined here
+ld: inode.o: in function `strpbrk':
+inode.c:(.text+0x619): multiple definition of `strpbrk'; open.o:open.c:(.text+0x178): first defined here
+ld: inode.o: in function `strstr':
+inode.c:(.text+0x64c): multiple definition of `strstr'; open.o:open.c:(.text+0x1ab): first defined here
+ld: inode.o: in function `strlen':
+inode.c:(.text+0x67f): multiple definition of `strlen'; open.o:open.c:(.text+0x1de): first defined here
+ld: inode.o: in function `strtok':
+inode.c:(.text+0x694): multiple definition of `strtok'; open.o:open.c:(.text+0x1f3): first defined here
+ld: inode.o: in function `memcpy':
+inode.c:(.text+0x719): multiple definition of `memcpy'; open.o:open.c:(.text+0x278): first defined here
+ld: inode.o: in function `memmove':
+inode.c:(.text+0x72f): multiple definition of `memmove'; open.o:open.c:(.text+0x28e): first defined here
+ld: inode.o: in function `memcmp':
+inode.c:(.text+0x755): multiple definition of `memcmp'; open.o:open.c:(.text+0x2b4): first defined here
+ld: inode.o: in function `memchr':
+inode.c:(.text+0x779): multiple definition of `memchr'; open.o:open.c:(.text+0x2d8): first defined here
+ld: inode.o: in function `memset':
+inode.c:(.text+0x7a0): multiple definition of `memset'; open.o:open.c:(.text+0x2ff): first defined here
+ld: inode.o: in function `get_super':
+inode.c:(.text+0x7b5): multiple definition of `get_super'; open.o:open.c:(.text+0x314): first defined here
+ld: file_table.o: in function `get_super':
+file_table.c:(.text+0x0): multiple definition of `get_super'; open.o:open.c:(.text+0x314): first defined here
+ld: buffer.o: in function `get_super':
+buffer.c:(.text+0x52): multiple definition of `get_super'; open.o:open.c:(.text+0x314): first defined here
+ld: super.o: in function `get_super':
+super.c:(.text+0x0): multiple definition of `get_super'; open.o:open.c:(.text+0x314): first defined here
+ld: block_dev.o: in function `get_super':
+block_dev.c:(.text+0x0): multiple definition of `get_super'; open.o:open.c:(.text+0x314): first defined here
+ld: block_dev.o: in function `get_fs_byte':
+block_dev.c:(.text+0x32): multiple definition of `get_fs_byte'; open.o:open.c:(.text+0x346): first defined here
+ld: block_dev.o: in function `get_fs_word':
+block_dev.c:(.text+0x3a): multiple definition of `get_fs_word'; open.o:open.c:(.text+0x34e): first defined here
+ld: block_dev.o: in function `get_fs_long':
+block_dev.c:(.text+0x43): multiple definition of `get_fs_long'; open.o:open.c:(.text+0x357): first defined here
+ld: block_dev.o: in function `put_fs_byte':
+block_dev.c:(.text+0x4b): multiple definition of `put_fs_byte'; open.o:open.c:(.text+0x35f): first defined here
+ld: block_dev.o: in function `put_fs_word':
+block_dev.c:(.text+0x58): multiple definition of `put_fs_word'; open.o:open.c:(.text+0x36c): first defined here
+ld: block_dev.o: in function `put_fs_long':
+block_dev.c:(.text+0x66): multiple definition of `put_fs_long'; open.o:open.c:(.text+0x37a): first defined here
+ld: char_dev.o: in function `get_super':
+char_dev.c:(.text+0x80): multiple definition of `get_super'; open.o:open.c:(.text+0x314): first defined here
+ld: file_dev.o: in function `get_super':
+file_dev.c:(.text+0x0): multiple definition of `get_super'; open.o:open.c:(.text+0x314): first defined here
+ld: file_dev.o: in function `get_fs_byte':
+file_dev.c:(.text+0x32): multiple definition of `get_fs_byte'; open.o:open.c:(.text+0x346): first defined here
+ld: file_dev.o: in function `get_fs_word':
+file_dev.c:(.text+0x3a): multiple definition of `get_fs_word'; open.o:open.c:(.text+0x34e): first defined here
+ld: file_dev.o: in function `get_fs_long':
+file_dev.c:(.text+0x43): multiple definition of `get_fs_long'; open.o:open.c:(.text+0x357): first defined here
+ld: file_dev.o: in function `put_fs_byte':
+file_dev.c:(.text+0x4b): multiple definition of `put_fs_byte'; open.o:open.c:(.text+0x35f): first defined here
+ld: file_dev.o: in function `put_fs_word':
+file_dev.c:(.text+0x58): multiple definition of `put_fs_word'; open.o:open.c:(.text+0x36c): first defined here
+ld: file_dev.o: in function `put_fs_long':
+file_dev.c:(.text+0x66): multiple definition of `put_fs_long'; open.o:open.c:(.text+0x37a): first defined here
+ld: stat.o: in function `get_super':
+stat.c:(.text+0x9d): multiple definition of `get_super'; open.o:open.c:(.text+0x314): first defined here
+ld: stat.o: in function `get_fs_byte':
+stat.c:(.text+0xcf): multiple definition of `get_fs_byte'; open.o:open.c:(.text+0x346): first defined here
+ld: stat.o: in function `get_fs_word':
+stat.c:(.text+0xd7): multiple definition of `get_fs_word'; open.o:open.c:(.text+0x34e): first defined here
+ld: stat.o: in function `get_fs_long':
+stat.c:(.text+0xe0): multiple definition of `get_fs_long'; open.o:open.c:(.text+0x357): first defined here
+ld: stat.o: in function `put_fs_byte':
+stat.c:(.text+0xe8): multiple definition of `put_fs_byte'; open.o:open.c:(.text+0x35f): first defined here
+ld: stat.o: in function `put_fs_word':
+stat.c:(.text+0xf5): multiple definition of `put_fs_word'; open.o:open.c:(.text+0x36c): first defined here
+ld: stat.o: in function `put_fs_long':
+stat.c:(.text+0x103): multiple definition of `put_fs_long'; open.o:open.c:(.text+0x37a): first defined here
+ld: exec.o: in function `get_super':
+exec.c:(.text+0x154): multiple definition of `get_super'; open.o:open.c:(.text+0x314): first defined here
+ld: exec.o: in function `get_fs_byte':
+exec.c:(.text+0x186): multiple definition of `get_fs_byte'; open.o:open.c:(.text+0x346): first defined here
+ld: exec.o: in function `get_fs_word':
+exec.c:(.text+0x18e): multiple definition of `get_fs_word'; open.o:open.c:(.text+0x34e): first defined here
+ld: exec.o: in function `get_fs_long':
+exec.c:(.text+0x197): multiple definition of `get_fs_long'; open.o:open.c:(.text+0x357): first defined here
+ld: exec.o: in function `put_fs_byte':
+exec.c:(.text+0x19f): multiple definition of `put_fs_byte'; open.o:open.c:(.text+0x35f): first defined here
+ld: exec.o: in function `put_fs_word':
+exec.c:(.text+0x1ac): multiple definition of `put_fs_word'; open.o:open.c:(.text+0x36c): first defined here
+ld: exec.o: in function `put_fs_long':
+exec.c:(.text+0x1ba): multiple definition of `put_fs_long'; open.o:open.c:(.text+0x37a): first defined here
+ld: pipe.o: in function `get_super':
+pipe.c:(.text+0x0): multiple definition of `get_super'; open.o:open.c:(.text+0x314): first defined here
+ld: pipe.o: in function `get_fs_byte':
+pipe.c:(.text+0x32): multiple definition of `get_fs_byte'; open.o:open.c:(.text+0x346): first defined here
+ld: pipe.o: in function `get_fs_word':
+pipe.c:(.text+0x3a): multiple definition of `get_fs_word'; open.o:open.c:(.text+0x34e): first defined here
+ld: pipe.o: in function `get_fs_long':
+pipe.c:(.text+0x43): multiple definition of `get_fs_long'; open.o:open.c:(.text+0x357): first defined here
+ld: pipe.o: in function `put_fs_byte':
+pipe.c:(.text+0x4b): multiple definition of `put_fs_byte'; open.o:open.c:(.text+0x35f): first defined here
+ld: pipe.o: in function `put_fs_word':
+pipe.c:(.text+0x58): multiple definition of `put_fs_word'; open.o:open.c:(.text+0x36c): first defined here
+ld: pipe.o: in function `put_fs_long':
+pipe.c:(.text+0x66): multiple definition of `put_fs_long'; open.o:open.c:(.text+0x37a): first defined here
+ld: namei.o: in function `get_super':
+namei.c:(.text+0x590): multiple definition of `get_super'; open.o:open.c:(.text+0x314): first defined here
+ld: namei.o: in function `get_fs_byte':
+namei.c:(.text+0x5c2): multiple definition of `get_fs_byte'; open.o:open.c:(.text+0x346): first defined here
+ld: namei.o: in function `get_fs_word':
+namei.c:(.text+0x5ca): multiple definition of `get_fs_word'; open.o:open.c:(.text+0x34e): first defined here
+ld: namei.o: in function `get_fs_long':
+namei.c:(.text+0x5d3): multiple definition of `get_fs_long'; open.o:open.c:(.text+0x357): first defined here
+ld: namei.o: in function `put_fs_byte':
+namei.c:(.text+0x5db): multiple definition of `put_fs_byte'; open.o:open.c:(.text+0x35f): first defined here
+ld: namei.o: in function `put_fs_word':
+namei.c:(.text+0x5e8): multiple definition of `put_fs_word'; open.o:open.c:(.text+0x36c): first defined here
+ld: namei.o: in function `put_fs_long':
+namei.c:(.text+0x5f6): multiple definition of `put_fs_long'; open.o:open.c:(.text+0x37a): first defined here
+ld: namei.o: in function `strcpy':
+namei.c:(.text+0x602): multiple definition of `strcpy'; open.o:open.c:(.text+0x0): first defined here
+ld: namei.o: in function `strncpy':
+namei.c:(.text+0x618): multiple definition of `strncpy'; open.o:open.c:(.text+0x16): first defined here
+ld: namei.o: in function `strcat':
+namei.c:(.text+0x637): multiple definition of `strcat'; open.o:open.c:(.text+0x35): first defined here
+ld: namei.o: in function `strncat':
+namei.c:(.text+0x65a): multiple definition of `strncat'; open.o:open.c:(.text+0x58): first defined here
+ld: namei.o: in function `strcmp':
+namei.c:(.text+0x687): multiple definition of `strcmp'; open.o:open.c:(.text+0x85): first defined here
+ld: namei.o: in function `strncmp':
+namei.c:(.text+0x6aa): multiple definition of `strncmp'; open.o:open.c:(.text+0xa8): first defined here
+ld: namei.o: in function `strchr':
+namei.c:(.text+0x6d4): multiple definition of `strchr'; open.o:open.c:(.text+0xd2): first defined here
+ld: namei.o: in function `strrchr':
+namei.c:(.text+0x6f3): multiple definition of `strrchr'; open.o:open.c:(.text+0xf1): first defined here
+ld: namei.o: in function `strspn':
+namei.c:(.text+0x714): multiple definition of `strspn'; open.o:open.c:(.text+0x112): first defined here
+ld: namei.o: in function `strcspn':
+namei.c:(.text+0x747): multiple definition of `strcspn'; open.o:open.c:(.text+0x145): first defined here
+ld: namei.o: in function `strpbrk':
+namei.c:(.text+0x77a): multiple definition of `strpbrk'; open.o:open.c:(.text+0x178): first defined here
+ld: namei.o: in function `strstr':
+namei.c:(.text+0x7ad): multiple definition of `strstr'; open.o:open.c:(.text+0x1ab): first defined here
+ld: namei.o: in function `strlen':
+namei.c:(.text+0x7e0): multiple definition of `strlen'; open.o:open.c:(.text+0x1de): first defined here
+ld: namei.o: in function `strtok':
+namei.c:(.text+0x7f5): multiple definition of `strtok'; open.o:open.c:(.text+0x1f3): first defined here
+ld: namei.o: in function `memcpy':
+namei.c:(.text+0x87a): multiple definition of `memcpy'; open.o:open.c:(.text+0x278): first defined here
+ld: namei.o: in function `memmove':
+namei.c:(.text+0x890): multiple definition of `memmove'; open.o:open.c:(.text+0x28e): first defined here
+ld: namei.o: in function `memcmp':
+namei.c:(.text+0x8b6): multiple definition of `memcmp'; open.o:open.c:(.text+0x2b4): first defined here
+ld: namei.o: in function `memchr':
+namei.c:(.text+0x8da): multiple definition of `memchr'; open.o:open.c:(.text+0x2d8): first defined here
+ld: namei.o: in function `memset':
+namei.c:(.text+0x901): multiple definition of `memset'; open.o:open.c:(.text+0x2ff): first defined here
+ld: bitmap.o: in function `strcpy':
+bitmap.c:(.text+0x0): multiple definition of `strcpy'; open.o:open.c:(.text+0x0): first defined here
+ld: bitmap.o: in function `strncpy':
+bitmap.c:(.text+0x16): multiple definition of `strncpy'; open.o:open.c:(.text+0x16): first defined here
+ld: bitmap.o: in function `strcat':
+bitmap.c:(.text+0x35): multiple definition of `strcat'; open.o:open.c:(.text+0x35): first defined here
+ld: bitmap.o: in function `strncat':
+bitmap.c:(.text+0x58): multiple definition of `strncat'; open.o:open.c:(.text+0x58): first defined here
+ld: bitmap.o: in function `strcmp':
+bitmap.c:(.text+0x85): multiple definition of `strcmp'; open.o:open.c:(.text+0x85): first defined here
+ld: bitmap.o: in function `strncmp':
+bitmap.c:(.text+0xa8): multiple definition of `strncmp'; open.o:open.c:(.text+0xa8): first defined here
+ld: bitmap.o: in function `strchr':
+bitmap.c:(.text+0xd2): multiple definition of `strchr'; open.o:open.c:(.text+0xd2): first defined here
+ld: bitmap.o: in function `strrchr':
+bitmap.c:(.text+0xf1): multiple definition of `strrchr'; open.o:open.c:(.text+0xf1): first defined here
+ld: bitmap.o: in function `strspn':
+bitmap.c:(.text+0x112): multiple definition of `strspn'; open.o:open.c:(.text+0x112): first defined here
+ld: bitmap.o: in function `strcspn':
+bitmap.c:(.text+0x145): multiple definition of `strcspn'; open.o:open.c:(.text+0x145): first defined here
+ld: bitmap.o: in function `strpbrk':
+bitmap.c:(.text+0x178): multiple definition of `strpbrk'; open.o:open.c:(.text+0x178): first defined here
+ld: bitmap.o: in function `strstr':
+bitmap.c:(.text+0x1ab): multiple definition of `strstr'; open.o:open.c:(.text+0x1ab): first defined here
+ld: bitmap.o: in function `strlen':
+bitmap.c:(.text+0x1de): multiple definition of `strlen'; open.o:open.c:(.text+0x1de): first defined here
+ld: bitmap.o: in function `strtok':
+bitmap.c:(.text+0x1f3): multiple definition of `strtok'; open.o:open.c:(.text+0x1f3): first defined here
+ld: bitmap.o: in function `memcpy':
+bitmap.c:(.text+0x278): multiple definition of `memcpy'; open.o:open.c:(.text+0x278): first defined here
+ld: bitmap.o: in function `memmove':
+bitmap.c:(.text+0x28e): multiple definition of `memmove'; open.o:open.c:(.text+0x28e): first defined here
+ld: bitmap.o: in function `memcmp':
+bitmap.c:(.text+0x2b4): multiple definition of `memcmp'; open.o:open.c:(.text+0x2b4): first defined here
+ld: bitmap.o: in function `memchr':
+bitmap.c:(.text+0x2d8): multiple definition of `memchr'; open.o:open.c:(.text+0x2d8): first defined here
+ld: bitmap.o: in function `memset':
+bitmap.c:(.text+0x2ff): multiple definition of `memset'; open.o:open.c:(.text+0x2ff): first defined here
+ld: bitmap.o: in function `get_super':
+bitmap.c:(.text+0x314): multiple definition of `get_super'; open.o:open.c:(.text+0x314): first defined here
+ld: fcntl.o: in function `strcpy':
+fcntl.c:(.text+0x76): multiple definition of `strcpy'; open.o:open.c:(.text+0x0): first defined here
+ld: fcntl.o: in function `strncpy':
+fcntl.c:(.text+0x8c): multiple definition of `strncpy'; open.o:open.c:(.text+0x16): first defined here
+ld: fcntl.o: in function `strcat':
+fcntl.c:(.text+0xab): multiple definition of `strcat'; open.o:open.c:(.text+0x35): first defined here
+ld: fcntl.o: in function `strncat':
+fcntl.c:(.text+0xce): multiple definition of `strncat'; open.o:open.c:(.text+0x58): first defined here
+ld: fcntl.o: in function `strcmp':
+fcntl.c:(.text+0xfb): multiple definition of `strcmp'; open.o:open.c:(.text+0x85): first defined here
+ld: fcntl.o: in function `strncmp':
+fcntl.c:(.text+0x11e): multiple definition of `strncmp'; open.o:open.c:(.text+0xa8): first defined here
+ld: fcntl.o: in function `strchr':
+fcntl.c:(.text+0x148): multiple definition of `strchr'; open.o:open.c:(.text+0xd2): first defined here
+ld: fcntl.o: in function `strrchr':
+fcntl.c:(.text+0x167): multiple definition of `strrchr'; open.o:open.c:(.text+0xf1): first defined here
+ld: fcntl.o: in function `strspn':
+fcntl.c:(.text+0x188): multiple definition of `strspn'; open.o:open.c:(.text+0x112): first defined here
+ld: fcntl.o: in function `strcspn':
+fcntl.c:(.text+0x1bb): multiple definition of `strcspn'; open.o:open.c:(.text+0x145): first defined here
+ld: fcntl.o: in function `strpbrk':
+fcntl.c:(.text+0x1ee): multiple definition of `strpbrk'; open.o:open.c:(.text+0x178): first defined here
+ld: fcntl.o: in function `strstr':
+fcntl.c:(.text+0x221): multiple definition of `strstr'; open.o:open.c:(.text+0x1ab): first defined here
+ld: fcntl.o: in function `strlen':
+fcntl.c:(.text+0x254): multiple definition of `strlen'; open.o:open.c:(.text+0x1de): first defined here
+ld: fcntl.o: in function `strtok':
+fcntl.c:(.text+0x269): multiple definition of `strtok'; open.o:open.c:(.text+0x1f3): first defined here
+ld: fcntl.o: in function `memcpy':
+fcntl.c:(.text+0x2ee): multiple definition of `memcpy'; open.o:open.c:(.text+0x278): first defined here
+ld: fcntl.o: in function `memmove':
+fcntl.c:(.text+0x304): multiple definition of `memmove'; open.o:open.c:(.text+0x28e): first defined here
+ld: fcntl.o: in function `memcmp':
+fcntl.c:(.text+0x32a): multiple definition of `memcmp'; open.o:open.c:(.text+0x2b4): first defined here
+ld: fcntl.o: in function `memchr':
+fcntl.c:(.text+0x34e): multiple definition of `memchr'; open.o:open.c:(.text+0x2d8): first defined here
+ld: fcntl.o: in function `memset':
+fcntl.c:(.text+0x375): multiple definition of `memset'; open.o:open.c:(.text+0x2ff): first defined here
+ld: fcntl.o: in function `get_super':
+fcntl.c:(.text+0x38a): multiple definition of `get_super'; open.o:open.c:(.text+0x314): first defined here
+ld: fcntl.o: in function `get_fs_byte':
+fcntl.c:(.text+0x3bc): multiple definition of `get_fs_byte'; open.o:open.c:(.text+0x346): first defined here
+ld: fcntl.o: in function `get_fs_word':
+fcntl.c:(.text+0x3c4): multiple definition of `get_fs_word'; open.o:open.c:(.text+0x34e): first defined here
+ld: fcntl.o: in function `get_fs_long':
+fcntl.c:(.text+0x3cd): multiple definition of `get_fs_long'; open.o:open.c:(.text+0x357): first defined here
+ld: fcntl.o: in function `put_fs_byte':
+fcntl.c:(.text+0x3d5): multiple definition of `put_fs_byte'; open.o:open.c:(.text+0x35f): first defined here
+ld: fcntl.o: in function `put_fs_word':
+fcntl.c:(.text+0x3e2): multiple definition of `put_fs_word'; open.o:open.c:(.text+0x36c): first defined here
+ld: fcntl.o: in function `put_fs_long':
+fcntl.c:(.text+0x3f0): multiple definition of `put_fs_long'; open.o:open.c:(.text+0x37a): first defined here
+ld: ioctl.o: in function `strcpy':
+ioctl.c:(.text+0x0): multiple definition of `strcpy'; open.o:open.c:(.text+0x0): first defined here
+ld: ioctl.o: in function `strncpy':
+ioctl.c:(.text+0x16): multiple definition of `strncpy'; open.o:open.c:(.text+0x16): first defined here
+ld: ioctl.o: in function `strcat':
+ioctl.c:(.text+0x35): multiple definition of `strcat'; open.o:open.c:(.text+0x35): first defined here
+ld: ioctl.o: in function `strncat':
+ioctl.c:(.text+0x58): multiple definition of `strncat'; open.o:open.c:(.text+0x58): first defined here
+ld: ioctl.o: in function `strcmp':
+ioctl.c:(.text+0x85): multiple definition of `strcmp'; open.o:open.c:(.text+0x85): first defined here
+ld: ioctl.o: in function `strncmp':
+ioctl.c:(.text+0xa8): multiple definition of `strncmp'; open.o:open.c:(.text+0xa8): first defined here
+ld: ioctl.o: in function `strchr':
+ioctl.c:(.text+0xd2): multiple definition of `strchr'; open.o:open.c:(.text+0xd2): first defined here
+ld: ioctl.o: in function `strrchr':
+ioctl.c:(.text+0xf1): multiple definition of `strrchr'; open.o:open.c:(.text+0xf1): first defined here
+ld: ioctl.o: in function `strspn':
+ioctl.c:(.text+0x112): multiple definition of `strspn'; open.o:open.c:(.text+0x112): first defined here
+ld: ioctl.o: in function `strcspn':
+ioctl.c:(.text+0x145): multiple definition of `strcspn'; open.o:open.c:(.text+0x145): first defined here
+ld: ioctl.o: in function `strpbrk':
+ioctl.c:(.text+0x178): multiple definition of `strpbrk'; open.o:open.c:(.text+0x178): first defined here
+ld: ioctl.o: in function `strstr':
+ioctl.c:(.text+0x1ab): multiple definition of `strstr'; open.o:open.c:(.text+0x1ab): first defined here
+ld: ioctl.o: in function `strlen':
+ioctl.c:(.text+0x1de): multiple definition of `strlen'; open.o:open.c:(.text+0x1de): first defined here
+ld: ioctl.o: in function `strtok':
+ioctl.c:(.text+0x1f3): multiple definition of `strtok'; open.o:open.c:(.text+0x1f3): first defined here
+ld: ioctl.o: in function `memcpy':
+ioctl.c:(.text+0x278): multiple definition of `memcpy'; open.o:open.c:(.text+0x278): first defined here
+ld: ioctl.o: in function `memmove':
+ioctl.c:(.text+0x28e): multiple definition of `memmove'; open.o:open.c:(.text+0x28e): first defined here
+ld: ioctl.o: in function `memcmp':
+ioctl.c:(.text+0x2b4): multiple definition of `memcmp'; open.o:open.c:(.text+0x2b4): first defined here
+ld: ioctl.o: in function `memchr':
+ioctl.c:(.text+0x2d8): multiple definition of `memchr'; open.o:open.c:(.text+0x2d8): first defined here
+ld: ioctl.o: in function `memset':
+ioctl.c:(.text+0x2ff): multiple definition of `memset'; open.o:open.c:(.text+0x2ff): first defined here
+ld: ioctl.o: in function `get_super':
+ioctl.c:(.text+0x314): multiple definition of `get_super'; open.o:open.c:(.text+0x314): first defined here
+ld: tty_ioctl.o: in function `get_super':
+tty_ioctl.c:(.text+0x0): multiple definition of `get_super'; open.o:open.c:(.text+0x314): first defined here
+ld: tty_ioctl.o: in function `get_fs_byte':
+tty_ioctl.c:(.text+0x32): multiple definition of `get_fs_byte'; open.o:open.c:(.text+0x346): first defined here
+ld: tty_ioctl.o: in function `get_fs_word':
+tty_ioctl.c:(.text+0x3a): multiple definition of `get_fs_word'; open.o:open.c:(.text+0x34e): first defined here
+ld: tty_ioctl.o: in function `get_fs_long':
+tty_ioctl.c:(.text+0x43): multiple definition of `get_fs_long'; open.o:open.c:(.text+0x357): first defined here
+ld: tty_ioctl.o: in function `put_fs_byte':
+tty_ioctl.c:(.text+0x4b): multiple definition of `put_fs_byte'; open.o:open.c:(.text+0x35f): first defined here
+ld: tty_ioctl.o: in function `put_fs_word':
+tty_ioctl.c:(.text+0x58): multiple definition of `put_fs_word'; open.o:open.c:(.text+0x36c): first defined here
+ld: tty_ioctl.o: in function `put_fs_long':
+tty_ioctl.c:(.text+0x66): multiple definition of `put_fs_long'; open.o:open.c:(.text+0x37a): first defined here
+ld: truncate.o: in function `get_super':
+truncate.c:(.text+0x85): multiple definition of `get_super'; open.o:open.c:(.text+0x314): first defined here
+make: *** [Makefile:23: fs.o] Error 1
